@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --main-color: #233950;
+  --second-color: #cc9933;
+  --white-color: #f7f7f7;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--white-color);
+}
+
+html {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  border-bottom: #ccc 1px solid;
+  font-size: 1.6em;
+  font-weight: 800;
+}
+
+header>.menu {
+  flex: 1;
+}
+
+header>.menu-right {
+  flex: 1;
+}
+
+header>.menu>img:hover {
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: min-content;
+  margin: 10px;
+  max-width: 1000px;
+}
+
+main>.title {
+  color: var(--second-color);
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.results-count>span {
+  font-weight: 800;
+}
+
+footer {
+  color: #0c0c0c99;
+  padding: 10px;
+}
+
+.results {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+  grid-gap: 20px;
+}
+
+.places-left>* {
+  margin-bottom: 5px;
+}
+
+.places>* {
+  margin-bottom: 5px;
+}
+
+.places>img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.places>.places-left>.place-title {
+  font-weight: 800;
+}
+
+.btn-show, .btn-hide {
+  padding: 5px;
+  width: 90px;
+  background-color: var(--second-color);
+  border-radius: 10px;
+  color: var(--white-color);
+  font-weight: 800;
+  text-align: center;
+}
+
+
+
+.btn-hide {
+  margin-bottom: 10px;
+  background-color: var(--main-color);
+}
+
+.hidden-text {
+  display: none;
+}
+
+.btn-show:hover, .btn-hide:hover {
+  cursor: pointer;
+}
+
+.results-count {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    margin: 10px auto;
+  }
+
+  .places {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 10px;
+  }
+}
